@@ -1,5 +1,6 @@
 import logoImg from '../../assets/logo.svg';
 import menuIcon from '../../assets/icon-menu.svg';
+import arrowDownIcon from '../../assets/icon-arrow-down.svg';
 
 import {
   HeaderContainer,
@@ -25,15 +26,21 @@ export function Header(){
             <LinksContainer>
               <ul>
                 <li>
-                  <button>Features</button>
+                  <button>
+                    <span>Features</span>
+                    <img src={arrowDownIcon} alt="arrow down" />
+                  </button>
                   <ul>
-                    <li>a</li>
+                    {/* <li>a</li> */}
                   </ul>
                 </li>
                 <li>
-                  <button>Company</button>
+                  <button>
+                    <span>Company</span>
+                    <img src={arrowDownIcon} alt="arrow down" />
+                  </button>
                   <ul>
-                    <li>a</li>
+                    {/* <li>a</li> */}
                   </ul>
                 </li>
                 <li>
@@ -43,17 +50,17 @@ export function Header(){
                   <a href="#">About</a>
                 </li>
               </ul>
+              <ButtonsContainer>
+                <ul>
+                  <li>
+                    <a href="#">Login</a>
+                  </li>
+                  <li>
+                    <a href="#">Register</a>
+                  </li>
+                </ul>
+              </ButtonsContainer>
             </LinksContainer>
-            <ButtonsContainer>
-              <ul>
-                <li>
-                  <a href="#">Login</a>
-                </li>
-                <li>
-                  <a href="#">Register</a>
-                </li>
-              </ul>
-            </ButtonsContainer>
           </NavContent>
         </NavContainer>
         <MenuButton type="button">
