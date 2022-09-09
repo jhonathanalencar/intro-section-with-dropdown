@@ -13,10 +13,13 @@ import {
   HeroInfo,
   Sponsors,
 } from './App.styles';
+import { useGlobalContext } from './hooks/useGlobalContext';
 
 export function App(){
+  const { isSidebarOpen } = useGlobalContext();
+
   return(
-    <HeroContainer>
+    <HeroContainer isSidebarOpen={isSidebarOpen}>
       <Header />
       <HeroContent>
         <HeroImage>

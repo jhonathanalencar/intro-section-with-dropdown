@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.section`
+export const HeroContainer = styled.section<{isSidebarOpen: boolean}>`
   width: 100%;
+  height: ${({isSidebarOpen}) => isSidebarOpen ? '100vh' : 'auto'};
+  overflow: ${({isSidebarOpen}) => isSidebarOpen ? 'hidden' : 'auto'};
 `;
 
 export const HeroContent = styled.main`

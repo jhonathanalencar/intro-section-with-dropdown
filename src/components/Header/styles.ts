@@ -25,7 +25,6 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavContent = styled.div`
-  /* display: none; */
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
@@ -114,5 +113,6 @@ export const MenuButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 99;
 `;
 
