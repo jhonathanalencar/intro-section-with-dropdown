@@ -6,29 +6,35 @@ import meetLogo from './assets/client-meet.svg';
 import makerLogo from './assets/client-maker.svg';
 import { Header } from './components/Header';
 
+import { 
+  HeroContainer,
+  HeroContent,
+  HeroImage,
+  HeroInfo,
+  Sponsors,
+} from './App.styles';
+
 export function App(){
   return(
-    <div>
+    <HeroContainer>
       <Header />
-      <section>
-        <div>
-          <div>
-            <img src={heroMobileImg} alt="image hero" />
-          </div>
+      <HeroContent>
+        <HeroImage>
+          <img src={heroMobileImg} alt="image hero" />
+        </HeroImage>
 
-          <div>
-            <h1>Make remote work</h1>
-            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-            <button type="button">Learn More</button>
-            <div>
-              <img src={databizLogo} alt="databiz logo" />
-              <img src={audiophileLogo} alt="audiophile logo" />
-              <img src={meetLogo} alt="meet logo" />
-              <img src={makerLogo} alt="maker logo" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        <HeroInfo>
+          <h1>Make remote work</h1>
+          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <button type="button">Learn more</button>
+          <Sponsors>
+            <img src={databizLogo} alt="databiz logo" />
+            <img src={audiophileLogo} alt="audiophile logo" />
+            <img src={meetLogo} alt="meet logo" />
+            <img src={makerLogo} alt="maker logo" />
+          </Sponsors>
+        </HeroInfo>
+      </HeroContent>
+    </HeroContainer>
   )
 }
