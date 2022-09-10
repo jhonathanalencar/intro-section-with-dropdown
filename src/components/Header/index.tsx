@@ -23,10 +23,10 @@ export function Header(){
         <Logo>
           <img src={images.logoImg} alt="logo" />
         </Logo>
-        {isSidebarOpen && (
+        {/* {isSidebarOpen && ( */}
           <NavContainer>
-            <NavContent>
-              <LinksContainer>
+            <NavContent className={isSidebarOpen ? 'show' : ''}>
+              <LinksContainer className={isSidebarOpen ? 'show' : ''}>
                 <ul>
                   <Dropdown title="Features">
                     <DropdownItem 
@@ -82,7 +82,7 @@ export function Header(){
               </LinksContainer>
             </NavContent>
           </NavContainer>
-        )}
+        {/* )} */}
         <MenuButton 
           type="button"
           onClick={toggleSidebarState}

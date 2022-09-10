@@ -28,10 +28,6 @@ export function App(){
             <source media="(min-width: 770px)" srcSet={heroDesktopImg} />
             <img src={heroMobileImg} />
           </picture>
-          {/* <img 
-            src={heroMobileImg} 
-            srcSet={`${heroMobileImg} 600w, ${heroDesktopImg} 750w`} alt="image hero" 
-          /> */}
         </HeroImage>
 
         <HeroInfo>

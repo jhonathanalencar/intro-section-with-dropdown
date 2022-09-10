@@ -3,16 +3,15 @@ import styled from "styled-components";
 export const HeroContainer = styled.section<{isSidebarOpen: boolean}>`
   width: 100%;
   height: ${({isSidebarOpen}) => isSidebarOpen ? '100vh' : 'auto'};
-  overflow: ${({isSidebarOpen}) => isSidebarOpen ? 'hidden' : 'auto'};
+  // overflow: ${({isSidebarOpen}) => isSidebarOpen ? 'hidden' : 'auto'};
   min-height: 100vh;
-`;
-
-export const HeroContent = styled.main`
-  width: 100%;
+  `;
+  
+  export const HeroContent = styled.main`
+  max-width: 100%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-
 
   @media (min-width: 770px){
     grid-template-columns: 1fr 1fr;
