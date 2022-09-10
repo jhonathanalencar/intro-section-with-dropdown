@@ -23,11 +23,19 @@ export function App(){
       <Header />
       <HeroContent>
         <HeroImage>
-          <img src={heroMobileImg} alt="image hero" />
+          <picture>
+            <source media="(max-width: 769px)" srcSet={heroMobileImg} />
+            <source media="(min-width: 770px)" srcSet={heroDesktopImg} />
+            <img src={heroMobileImg} />
+          </picture>
+          {/* <img 
+            src={heroMobileImg} 
+            srcSet={`${heroMobileImg} 600w, ${heroDesktopImg} 750w`} alt="image hero" 
+          /> */}
         </HeroImage>
 
         <HeroInfo>
-          <h1>Make remote work</h1>
+          <h1><span>Make</span> remote work</h1>
           <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
           <button type="button">Learn more</button>
           <Sponsors>
